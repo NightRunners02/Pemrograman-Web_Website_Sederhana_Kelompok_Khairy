@@ -37,6 +37,13 @@ header {
   z-index: 100;
 }
 
+.hamburger {
+  display: none; /* Hidden by default */
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+}
+
 .logo {
   font-size: 3rem;
   color: #b74b4b;
@@ -67,34 +74,43 @@ nav a.active {
 @media (max-width: 995px) {
   nav {
     position: absolute;
-    display: none;
+    display: none; /* Initially hidden */
     top: 0;
     right: 0;
-    width: 40%;
-    border-left: 3px solid #b74b4b;
-    border-bottom: 3px solid #b74b4b;
-    border-bottom-left-radius: 2rem;
-    padding: 1rem solid;
+    width: 100%;
     background-color: #161616;
+    border-left: 3px solid #b74b4b;
+    border-bottom-left-radius: 2rem;
     border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    flex-direction: column; /* Stack links vertically */
+    padding: 1rem;
   }
 
   nav.active {
-    display: block;
+    display: flex; /* Show nav when active */
   }
 
   nav a {
-    display: block;
+    display: block; /* Stack links */
     font-size: 2rem;
-    margin: 3rem 0;
+    margin: 1rem 0; /* Add some margin for spacing */
   }
 
-  nav a:hover,
-  nav a.active {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border-bottom: 0.5rem solid #b74b4b;
+  .hamburger {
+    display: block; /* Show hamburger icon */
   }
+}
+
+/* Additional styling for hamburger icon */
+.hamburger:hover {
+  color: #b74b4b; /* Change color on hover */
+}
+
+nav a:hover,
+nav a.active {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-bottom: 0.5rem solid #b74b4b;
 }
 
 section {
