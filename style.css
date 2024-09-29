@@ -302,6 +302,116 @@ span {
   color: #b74b4b;
 }
 
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #b74b4b;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #b74b4b;
+}
+
+/* Hamburger menu icon */
+.hamburger {
+  display: none;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.hamburger:hover {
+  color: #b74b4b;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background-color: rgba(22, 22, 22, 0.95);
+    width: 100%;
+    padding: 1rem;
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.content {
+  margin-top: 80px; /* Adjust this value to match the height of the fixed header */
+  padding: 2rem;
+}
+
+.typing-text {
+  font-size: 2.5rem;
+  color: #b74b4b;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  color: #b74b4b;
+  margin: 1rem 0;
+}
+
+
+
 /* keahlian/skill */
 
 .content p {

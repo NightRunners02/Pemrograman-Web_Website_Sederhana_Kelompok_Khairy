@@ -25,7 +25,7 @@
         <a href="Tim.html">Tim Saya</a>
       </nav>
     </header>
-    
+
     <section class="home">
       <div class="home-img">
         <img src="Rimuruu.gif" alt="" />
@@ -33,6 +33,7 @@
       <div class="home-content">
         <h1>Hi, It's <span>Night02</span></h1>
         <h3 class="typing-text">Saya Sebagai <span></span></h3>
+        <br /><br /><br />
         <p>
           Selamat datang di portofolio saya! Di sini kalian akan menemukan
           detail tentang layanan, keterampilan, pendidikan, pengalaman, dan cara
@@ -47,15 +48,13 @@
         <a href="#" class="btn">Pekerjakan saya</a>
       </div>
     </section>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
 
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-links");
-
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-</script>
-
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

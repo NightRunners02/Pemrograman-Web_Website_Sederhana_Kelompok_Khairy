@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Services</title>
   </head>
   <body>
     <header>
       <a href="index.html" class="logo">Night02</a>
-      <nav>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav id="nav-links">
         <a href="index.html" class="active">Rumah</a>
         <a href="services.html">Layanan</a>
         <a href="skills.html">Keahlian</a>
@@ -19,19 +26,13 @@
       </nav>
     </header>
 
-    <br /><br /><br /><br /><br /><br /><br /><br />
-
     <section class="content">
-      <h3 class="typing-text">Layanan <span></span></h3>
-      <br />
+      <h3 class="typing-text">Layanan <span></span></h3>       <br />
 
       <p>
         Saya menyediakan berbagai layanan pengembangan dan desain web, termasuk:
       </p>
-
-      <br />
-      <br />
-
+      
       <ul>
         <li>Pengembangan Situs Web Kustom</li>
         <li>Desain Responsif</li>
@@ -39,5 +40,14 @@
         <li>Solusi E-commerce</li>
       </ul>
     </section>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

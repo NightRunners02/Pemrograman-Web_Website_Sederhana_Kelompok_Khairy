@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <title>Skills</title>
   </head>
   <body>
     <header>
       <a href="index.html" class="logo">Night02</a>
-      <nav>
+      <div class="hamburger" id="hamburger">
+        <i class="fa fa-bars"></i>
+      </div>
+      <nav id="nav-links">
         <a href="index.html" class="active">Rumah</a>
         <a href="services.html">Layanan</a>
         <a href="skills.html">Keahlian</a>
@@ -19,17 +26,9 @@
       </nav>
     </header>
 
-    <br /><br /><br /><br /><br /><br /><br /><br />
-
     <section class="content">
-      <h3 class="typing-text">Keahlian <span></span></h3>
-      <br />
-
+      <h3 class="typing-text">Keahlian <span></span></h3> <br>
       <p>Berikut ini beberapa teknologi dan keterampilan yang saya kuasai:</p>
-
-      <br />
-      <br />
-
       <ul>
         <li>HTML & CSS</li>
         <li>JavaScript & React.js</li>
@@ -37,5 +36,14 @@
         <li>Manajemen Basis Data (SQL, NoSQL)</li>
       </ul>
     </section>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
