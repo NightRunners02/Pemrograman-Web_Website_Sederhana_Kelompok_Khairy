@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <title>Pengalaman</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Ahdan</a>
+      <div class="hamburger" id="hamburger">
+        <i class="fa fa-bars"></i>
+      </div>
+      <nav id="nav-links">
+        <a href="index.html" class="active">Rumah</a>
+        <a href="services.html">Layanan</a>
+        <a href="skills.html">Keahlian</a>
+        <a href="education.html">Pendidikan</a>
+        <a href="experience.html">Pengalaman</a>
+        <a href="Tim.html">Tim Saya</a>
+      </nav>
+    </header>
+
+    <section class="content">
+      <div style="text-align: center; color: #b74b4b" class="text">
+        <h1>Pengalaman <span></span></h1>
+      </div>
+      <br />
+
+      <p>Berikut ringkasan pengalaman profesional saya:</p>
+
+      <ul>
+        <li>Software Engineer di Perusahaan A (2015-2019)</li>
+        <li>Senior Developer di Perusahaan B (2019-Sekarang)</li>
+      </ul>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          Terima kasih telah mengunjungi portofolio saya. Jangan ragu untuk
+          menghubungi saya melalui media sosial atau email yang tersedia.
+        </p>
+        <div class="footer-social-icons">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Ahdan. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

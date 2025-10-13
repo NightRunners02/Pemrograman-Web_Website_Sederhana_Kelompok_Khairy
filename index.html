@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rumah</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Ahdan</a>
+      <div class="hamburger" id="hamburger">
+        <i class="fa fa-bars"></i>
+      </div>
+      <nav id="nav-links">
+        <a href="index.html" class="active">Rumah</a>
+        <a href="services.html">Layanan</a>
+        <a href="skills.html">Keahlian</a>
+        <a href="education.html">Pendidikan</a>
+        <a href="experience.html">Pengalaman</a>
+        <a href="tim.html">Tim Saya</a>
+      </nav>
+    </header>
+
+    <section class="home">
+      <div class="home-img">
+        <img src="kingahdan.png" alt="" />
+      </div>
+      <div class="home-content">
+        <h1>Hi, It's <span>Ahdan</span></h1>
+        <br />
+        <h3 class="typing-text">Saya Sebagai <span></span></h3>
+        <br /><br /><br />
+        <p>
+          Selamat datang di portofolio saya! Di sini kalian akan menemukan
+          detail tentang layanan, keterampilan, pendidikan, pengalaman, dan cara
+          menghubungi saya.
+        </p>
+        <br />
+        <br />
+
+        <a href="/404 Error Page Animation/error.html" class="btn">Pekerjakan saya</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          Terima kasih telah mengunjungi portofolio saya. Jangan ragu untuk
+          menghubungi saya melalui media sosial atau email yang tersedia.
+        </p>
+        <div class="footer-social-icons">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Ahdan. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
