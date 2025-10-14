@@ -1,0 +1,179 @@
+/* 🌑 RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at center, #020617 0%, #0b1220 100%);
+  color: #e2e8f0;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔹 Canvas Partikel */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* 🔹 NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.logo span {
+  color: #00bfff;
+}
+
+/* 🔹 ERROR BOX */
+.error-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.error-box {
+  max-width: 700px;
+  background: rgba(15, 23, 42, 0.75);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  text-align: center;
+  backdrop-filter: blur(16px);
+}
+
+/* 🔹 TEKS ERROR RGB ANIMASI */
+.glow-text {
+  font-size: 4rem;
+  font-weight: 800;
+  animation: rgbGlow 4s infinite linear;
+  text-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+@keyframes rgbGlow {
+  0% { color: #00ffff; text-shadow: 0 0 20px #00ffff; }
+  25% { color: #ff00ff; text-shadow: 0 0 20px #ff00ff; }
+  50% { color: #00ff00; text-shadow: 0 0 20px #00ff00; }
+  75% { color: #ffae00; text-shadow: 0 0 20px #ffae00; }
+  100% { color: #00ffff; text-shadow: 0 0 20px #00ffff; }
+}
+
+.error-message {
+  margin: 1.5rem 0;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+/* 🔹 BUTTON */
+.button-group {
+  margin: 1.5rem 0;
+}
+
+.btn {
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 0.3rem;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  color: #000;
+}
+
+.btn.ghost {
+  border: 2px solid #00ffff;
+  color: #00ffff;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* 🔹 SEARCH BOX */
+.search {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search input {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  width: 60%;
+}
+
+.search button {
+  border: none;
+  background: #00ffff;
+  padding: 0.6rem 1rem;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+/* 🔹 ROBOT */
+.robot-container {
+  margin-top: 2rem;
+}
+
+.robot {
+  width: 160px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.code-snippet {
+  margin-top: 0.6rem;
+  font-family: monospace;
+  opacity: 0.6;
+}
+
+/* 🔹 FOOTER */
+footer {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+footer a {
+  color: #38bdf8;
+}
+
+/* 🔹 RESPONSIVE */
+@media (max-width: 600px) {
+  .glow-text { font-size: 2.5rem; }
+  .error-box { padding: 2rem; }
+}

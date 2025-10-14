@@ -19,3 +19,8 @@ function doSearch(){
 
 // Optional redirect otomatis ke beranda (nonaktif secara default)
 // setTimeout(() => window.location.href='/', 10000);
+document.getElementById("ts").textContent =
+  new Date().toLocaleString("id-ID", {
+    dateStyle: "full",
+    timeStyle: "short"
+  });
