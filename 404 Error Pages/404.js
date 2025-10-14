@@ -24,3 +24,5 @@ document.getElementById("ts").textContent =
     dateStyle: "full",
     timeStyle: "short"
   });
+
+  

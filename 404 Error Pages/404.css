@@ -9,10 +9,8 @@
 body {
   background: radial-gradient(circle at center, #020617 0%, #0b1220 100%);
   color: #e2e8f0;
-  overflow: hidden;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* 🔹 Canvas Partikel */
@@ -25,15 +23,19 @@ body {
   z-index: -1;
 }
 
-/* 🔹 NAVBAR */
+/* 🔹 NAVBAR STICKY */
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70px;
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(15px);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.3s ease;
 }
 
 .logo {
@@ -49,7 +51,6 @@ body {
 
 /* 🔹 ERROR BOX */
 .error-wrapper {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,12 +67,13 @@ body {
   backdrop-filter: blur(16px);
 }
 
-/* 🔹 TEKS ERROR RGB ANIMASI */
+/* 🔹 TEKS ERROR RGB + GLITCH */
 .glow-text {
   font-size: 4rem;
   font-weight: 800;
   animation: rgbGlow 4s infinite linear;
-  text-shadow: 0 0 20px rgba(255,255,255,0.4);
+  position: relative;
+  display: inline-block;
 }
 
 @keyframes rgbGlow {
@@ -82,13 +84,53 @@ body {
   100% { color: #00ffff; text-shadow: 0 0 20px #00ffff; }
 }
 
+/* 💥 Efek Glitch */
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #00fff2;
+  animation: glitch1 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #ff00ff;
+  animation: glitch2 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch1 {
+  0% { clip: rect(12px, 9999px, 80px, 0); }
+  20% { clip: rect(0, 9999px, 8px, 0); }
+  40% { clip: rect(30px, 9999px, 90px, 0); }
+  60% { clip: rect(5px, 9999px, 50px, 0); }
+  80% { clip: rect(15px, 9999px, 100px, 0); }
+  100% { clip: rect(25px, 9999px, 70px, 0); }
+}
+
+@keyframes glitch2 {
+  0% { clip: rect(50px, 9999px, 70px, 0); }
+  25% { clip: rect(10px, 9999px, 40px, 0); }
+  50% { clip: rect(40px, 9999px, 90px, 0); }
+  75% { clip: rect(20px, 9999px, 80px, 0); }
+  100% { clip: rect(0, 9999px, 60px, 0); }
+}
+
+/* 🔹 TEXT & BUTTON */
 .error-message {
   margin: 1.5rem 0;
   line-height: 1.6;
   color: #cbd5e1;
 }
 
-/* 🔹 BUTTON */
 .button-group {
   margin: 1.5rem 0;
 }
@@ -117,7 +159,7 @@ body {
   transform: scale(1.05);
 }
 
-/* 🔹 SEARCH BOX */
+/* 🔹 SEARCH */
 .search {
   margin-top: 1rem;
   display: flex;
@@ -153,12 +195,6 @@ body {
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
-}
-
-.code-snippet {
-  margin-top: 0.6rem;
-  font-family: monospace;
-  opacity: 0.6;
 }
 
 /* 🔹 FOOTER */
