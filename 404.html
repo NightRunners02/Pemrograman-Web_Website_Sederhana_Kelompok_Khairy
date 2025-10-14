@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 - Halaman Tidak Ditemukan</title>
+  <meta name="description" content="404 Halaman tidak ditemukan — mari kembali ke beranda" />
+  <link rel="stylesheet" href="404.css">
+</head>
+<body>
+  <main class="container" role="main" aria-labelledby="title">
+    <section class="left" aria-labelledby="title">
+      <div class="eyebrow">Kesalahan 404</div>
+      <h1 id="title">Halaman Tidak Ditemukan</h1>
+      <p class="lead">
+        Maaf - halaman yang kamu cari tidak tersedia atau mungkin sudah dipindahkan. Coba kembali ke beranda atau gunakan fitur pencarian.
+      </p>
+
+      <div class="actions" aria-hidden="false">
+        <a class="btn btn-primary" href="/" title="Kembali ke Beranda" role="button" id="homeBtn">
+          ⟲ Kembali ke Beranda
+        </a>
+        <a class="btn btn-ghost" href="javascript:history.back()" title="Kembali">
+          ← Kembali
+        </a>
+      </div>
+
+      <form class="search" role="search" onsubmit="event.preventDefault(); doSearch();">
+        <input id="q" name="q" type="search" placeholder="Cari di situs ini..." aria-label="Cari di situs ini" />
+        <button class="btn btn-primary" type="submit" aria-label="Cari">🔎</button>
+      </form>
+
+      <footer class="meta" aria-hidden="true">
+        <span>Jika masalah berlanjut, hubungi <a href="mailto:funxyle@gmail.com" style="color:inherit;text-decoration:underline;">funxyle@gmail.com</a></span>
+        <span>•</span>
+        <span>Timestamp: <time id="ts"></time></span>
+      </footer>
+    </section>
+
+    <aside class="visual" aria-hidden="true">
+      <div class="scene">
+        <!-- Illustrative SVG (robot + folder) -->
+        <svg class="robot" viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustrasi 404">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#60a5fa"/>
+              <stop offset="1" stop-color="#3b82f6"/>
+            </linearGradient>
+            <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+              <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#0b1220" flood-opacity="0.6"/>
+            </filter>
+          </defs>
+
+          <ellipse cx="110" cy="142" rx="62" ry="10" fill="rgba(2,6,23,0.6)"/>
+
+          <g transform="translate(40,16)" filter="url(#shadow)">
+            <rect x="20" y="24" width="120" height="90" rx="14" fill="url(#g1)"/>
+            <rect x="28" y="32" width="104" height="74" rx="10" fill="#07122a" opacity="0.12"/>
+            <circle cx="50" cy="66" r="8" fill="#fff"/>
+            <circle cx="90" cy="66" r="8" fill="#fff"/>
+            <circle cx="50" cy="66" r="3" fill="#07122a"/>
+            <circle cx="90" cy="66" r="3" fill="#07122a"/>
+            <rect x="56" y="84" width="36" height="6" rx="3" fill="#e6eef8" opacity="0.14"/>
+            <rect x="92" y="6" width="6" height="18" rx="3" fill="#ffd47a"/>
+            <circle cx="95" cy="6" r="6" fill="#ffd47a"/>
+          </g>
+
+          <text x="40" y="28" fill="#cfe8ff" font-family="Inter, Roboto, Arial" font-size="20" font-weight="700">404</text>
+          <text x="40" y="48" fill="#94a3b8" font-family="Inter, Roboto, Arial" font-size="11">Halaman tidak ditemukan</text>
+        </svg>
+
+        <div class="code-snippet" aria-hidden="true">
+          /pages/unknown → 404
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="404.js"></script>
+</body>
+</html>

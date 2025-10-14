@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,149 +8,89 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Rumah</title>
+    <title>NightRunners02 Portfolio</title>
   </head>
   <body>
     <header>
-      <a href="index.html" class="logo">Ahdan</a>
-      <div class="hamburger" id="hamburger">
-        <i class="fa fa-bars"></i>
+      <a href="/index.html" class="logo">Night<span>Runners02</span></a>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
       </div>
-      <nav id="nav-links">
-        <a href="index.html" class="active">Rumah</a>
-        <a href="services.html">Layanan</a>
-        <a href="skills.html">Keahlian</a>
-        <a href="education.html">Pendidikan</a>
-        <a href="experience.html">Pengalaman</a>
-        <a href="tim.html">Tim Saya</a>
+
+      <nav class="navbar" id="navbar">
+        <a href="/index.html" class="active">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/skills.html">Skills</a>
+        <a href="/education.html">Education</a>
+        <a href="/experience.html">Experience</a>
+        <a href="/contact.html">Contact</a>
       </nav>
     </header>
 
     <section class="home">
       <div class="home-img">
-        <img src="kingahdan.png" alt="" />
+        <img src="rimuru-chan.gif" alt="Rimuru" />
       </div>
-      <div class="home-content">
-        <h1>Hi, It's <span>Ahdan</span></h1>
-        <br />
-        <h3 class="typing-text">Saya Sebagai <span></span></h3>
-        <br /><br /><br />
-        <p>
-          Selamat datang di portofolio saya! Di sini kalian akan menemukan
-          detail tentang layanan, keterampilan, pendidikan, pengalaman, dan cara
-          menghubungi saya.
-        </p>
-        <br />
-        <br />
 
-        <a href="/404 Error Page Animation/error.html" class="btn">Pekerjakan saya</a>
+      <div class="home-content">
+        <h1>Hi, It's <span>NightRunners02</span></h1>
+        <h3 class="typing-text">I'm a <span id="typing"></span></h3>
+        <p>
+          Seorang Frontend Developer yang berfokus pada menciptakan antarmuka
+          web modern, responsif, dan interaktif. Berpengalaman dalam HTML, CSS,
+          dan JavaScript, serta berkomitmen menghadirkan pengalaman pengguna
+          yang cepat, estetis, dan fungsional.
+        </p>
+
+        <div class="social-icons">
+          <a href="/404.html"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="/404.html"><i class="fa-brands fa-github"></i></a>
+          <a href="/404.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="/404.html"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <a href="/404.html" class="btn">Hire Me</a>
       </div>
     </section>
 
-    <footer>
-      <div class="footer-content">
-        <p>
-          Terima kasih telah mengunjungi portofolio saya. Jangan ragu untuk
-          menghubungi saya melalui media sosial atau email yang tersedia.
-        </p>
-        <div class="footer-social-icons">
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Ahdan. All Rights Reserved.</p>
-      </div>
-    </footer>
-
     <script>
-      const hamburger = document.getElementById("hamburger");
-      const navLinks = document.getElementById("nav-links");
+      // Hamburger menu
+      const menuToggle = document.getElementById("menu-toggle");
+      const navbar = document.getElementById("navbar");
+      menuToggle.onclick = () => {
+        navbar.classList.toggle("active");
+        menuToggle.classList.toggle("open");
+      };
 
-      hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
+      // Typing effect
+      const typingText = document.getElementById("typing");
+      const words = ["Frontend Developer", "Web Designer", "UI/UX Enthusiast"];
+      let wordIndex = 0;
+      let charIndex = 0;
+
+      function typeEffect() {
+        if (charIndex < words[wordIndex].length) {
+          typingText.textContent += words[wordIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(typeEffect, 100);
+        } else {
+          setTimeout(eraseEffect, 1500);
+        }
+      }
+
+      function eraseEffect() {
+        if (charIndex > 0) {
+          typingText.textContent = words[wordIndex].substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(eraseEffect, 50);
+        } else {
+          wordIndex = (wordIndex + 1) % words.length;
+          setTimeout(typeEffect, 300);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", typeEffect);
     </script>
   </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Rumah</title>
-  </head>
-  <body>
-    <header>
-      <a href="index.html" class="logo">Ahdan</a>
-      <div class="hamburger" id="hamburger">
-        <i class="fa fa-bars"></i>
-      </div>
-      <nav id="nav-links">
-        <a href="index.html" class="active">Rumah</a>
-        <a href="services.html">Layanan</a>
-        <a href="skills.html">Keahlian</a>
-        <a href="education.html">Pendidikan</a>
-        <a href="experience.html">Pengalaman</a>
-        <a href="Tim.html">Tim Saya</a>
-      </nav>
-    </header>
-
-    <section class="home">
-      <div class="home-img">
-        <img src="kingahdan.png" alt="" />
-      </div>
-      <div class="home-content">
-        <h1>Hi, It's <span>Ahdan</span></h1>
-        <br />
-        <h3 class="typing-text">Saya Sebagai <span></span></h3>
-        <br /><br /><br />
-        <p>
-          Selamat datang di portofolio saya! Di sini kalian akan menemukan
-          detail tentang layanan, keterampilan, pendidikan, pengalaman, dan cara
-          menghubungi saya.
-        </p>
-        <br />
-        <br />
-
-        <a href="#" class="btn">Pekerjakan saya</a>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-content">
-        <p>
-          Terima kasih telah mengunjungi portofolio saya. Jangan ragu untuk
-          menghubungi saya melalui media sosial atau email yang tersedia.
-        </p>
-        <div class="footer-social-icons">
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Ahdan. All Rights Reserved.</p>
-      </div>
-    </footer>
-
-    <script>
-      const hamburger = document.getElementById("hamburger");
-      const navLinks = document.getElementById("nav-links");
-
-      hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
-    </script>
-  </body>
-</html>
->>>>>>> e7496a5fe8aaa8b71ff05051319343d321ab2d93

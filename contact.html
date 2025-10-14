@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | NightRunners02</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/index.html" class="logo">Night<span>Runners02</span></a>
+      <div class="menu-icon" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <nav class="navbar">
+        <a href="/index.html">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/skills.html">Skills</a>
+        <a href="/education.html">Education</a>
+        <a href="/experience.html">Experience</a>
+        <a href="/contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <section class="section fade-in contact-section">
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:nightrunners02@gmail.com"
+              >nightrunners02@gmail.com</a
+            >
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+6281234567890">+62 812 3456 7890</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/NightRunners02" target="_blank"
+              >github.com/NightRunners02</a
+            >
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="return sendMessage(event)">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+          <p id="msg-status"></p>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      function sendMessage(e) {
+        e.preventDefault();
+        const msg = document.getElementById("msg-status");
+        msg.textContent = "Message sent successfully ✅";
+        msg.style.color = "#00ffff";
+        document.querySelector(".contact-form").reset();
+        setTimeout(() => {
+          msg.textContent = "";
+        }, 3000);
+      }
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

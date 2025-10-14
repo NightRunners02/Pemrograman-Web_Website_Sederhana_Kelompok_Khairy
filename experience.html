@@ -1,141 +1,61 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <title>Experience | NightRunners02</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <title>Pengalaman</title>
-  </head>
-  <body>
-    <header>
-      <a href="index.html" class="logo">Ahdan</a>
-      <div class="hamburger" id="hamburger">
-        <i class="fa fa-bars"></i>
-      </div>
-      <nav id="nav-links">
-        <a href="index.html" class="active">Rumah</a>
-        <a href="services.html">Layanan</a>
-        <a href="skills.html">Keahlian</a>
-        <a href="education.html">Pendidikan</a>
-        <a href="experience.html">Pengalaman</a>
-        <a href="Tim.html">Tim Saya</a>
-      </nav>
-    </header>
-
-    <section class="content">
-      <div style="text-align: center; color: #b74b4b" class="text">
-        <h1>Pengalaman <span></span></h1>
-      </div>
-      <br />
-
-      <p>Berikut ringkasan pengalaman profesional saya:</p>
-
-      <ul>
-        <li>Software Engineer di Perusahaan A (2015-2019)</li>
-        <li>Senior Developer di Perusahaan B (2019-Sekarang)</li>
-      </ul>
-    </section>
-
-    <footer>
-      <div class="footer-content">
-        <p>
-          Terima kasih telah mengunjungi portofolio saya. Jangan ragu untuk
-          menghubungi saya melalui media sosial atau email yang tersedia.
-        </p>
-        <div class="footer-social-icons">
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Ahdan. All Rights Reserved.</p>
-      </div>
-    </footer>
-
-    <script>
-      const hamburger = document.getElementById("hamburger");
-      const navLinks = document.getElementById("nav-links");
-      hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
-    </script>
-  </body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <title>Pengalaman</title>
   </head>
   <body>
     <header>
-      <a href="index.html" class="logo">Ahdan</a>
-      <div class="hamburger" id="hamburger">
-        <i class="fa fa-bars"></i>
+      <a href="/index.html" class="logo">Night<span>Runners02</span></a>
+      <div class="menu-icon" id="menu-icon">
+        <i class="fa-solid fa-bars"></i>
       </div>
-      <nav id="nav-links">
-        <a href="index.html" class="active">Rumah</a>
-        <a href="services.html">Layanan</a>
-        <a href="skills.html">Keahlian</a>
-        <a href="education.html">Pendidikan</a>
-        <a href="experience.html">Pengalaman</a>
-        <a href="Tim.html">Tim Saya</a>
+      <nav class="navbar">
+        <a href="/index.html">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/skills.html">Skills</a>
+        <a href="/education.html">Education</a>
+        <a href="/experience.html" class="active">Experience</a>
+        <a href="/contact.html">Contact</a>
       </nav>
     </header>
 
-    <section class="content">
-      <div style="text-align: center; color: #b74b4b" class="text">
-        <h1>Pengalaman <span></span></h1>
-      </div>
-      <br />
-
-      <p>Berikut ringkasan pengalaman profesional saya:</p>
-
-      <ul>
-        <li>Software Engineer di Perusahaan A (2015-2019)</li>
-        <li>Senior Developer di Perusahaan B (2019-Sekarang)</li>
-      </ul>
-    </section>
-
-    <footer>
-      <div class="footer-content">
-        <p>
-          Terima kasih telah mengunjungi portofolio saya. Jangan ragu untuk
-          menghubungi saya melalui media sosial atau email yang tersedia.
-        </p>
-        <div class="footer-social-icons">
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <section class="section">
+      <h2 class="section-title">My <span>Experience</span></h2>
+      <div class="card-container">
+        <div class="card">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Freelance Web Developer</h3>
+          <p>
+            Membangun website portfolio, landing page, dan sistem manajemen
+            berbasis web dengan HTML, CSS, JS, dan Python.
+          </p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-robot"></i>
+          <h3>IoT Project Developer</h3>
+          <p>
+            Mengembangkan sistem pemantauan kandang ayam berbasis IoT dengan
+            ESP32 dan Firebase sebagai tugas proyek UAP.
+          </p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-brain"></i>
+          <h3>Machine Learning Researcher</h3>
+          <p>
+            Mengerjakan penelitian text classification dengan algoritma Naïve
+            Bayes dan BERT untuk analisis sentimen review produk.
+          </p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Ahdan. All Rights Reserved.</p>
-      </div>
-    </footer>
+    </section>
 
-    <script>
-      const hamburger = document.getElementById("hamburger");
-      const navLinks = document.getElementById("nav-links");
-      hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
->>>>>>> e7496a5fe8aaa8b71ff05051319343d321ab2d93
